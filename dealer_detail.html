@@ -1,0 +1,65 @@
+<!-- dealer_details.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dealer Details</title>
+    <style>
+        /* Your CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        h1, h2 {
+            margin-bottom: 10px;
+        }
+
+        .dealer-info {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .dealer-info p {
+            margin: 5px 0;
+        }
+
+        .prices-history {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .prices-history ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .prices-history li {
+            margin-bottom: 15px;
+        }
+    </style>
+    <!-- Your CSS links -->
+</head>
+<body>
+    <h1>Dealer Details</h1>
+
+    <div class="dealer-info">
+        <h2>{{ dealer.dealer_shop }}</h2>
+        <p><strong>Dealer Address:</strong> {{ dealer.dealer_address }}</p>
+        <p><strong>Dealer Phone:</strong> {{ dealer.dealer_phno }}</p>
+        <!-- Include more details about the dealer -->
+    </div>
+
+    <a href="{% url 'price_display' %}">View Price Display</a> 
+</body>
+</html>
